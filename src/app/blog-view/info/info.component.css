@@ -1,0 +1,58 @@
+.container2{
+    margin-top: 25px;
+    margin-left: 200px;
+    box-shadow: rgba(126, 120, 120, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+   width: 70%;
+   background-color: #a8c5ec; 
+}
+.heading{
+  font-size: 24px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(185, 35, 35);
+  margin: 5px 25px;
+}
+.img_align{
+  width: 100%;
+}
+a:hover::before {
+   transform: scale(1.1);
+   box-shadow: 0 0 15px blue;
+ }
+  a:hover {
+   color: rgb(9, 255, 0);
+   text-shadow: 0 0 5px rgb(23, 167, 3);
+ }
+ .deletebtn:hover::before {
+   transform: scale(1.1);
+   box-shadow: 0 0 15px red;
+ }
+  .deletebtn:hover {
+   color:red;
+   box-shadow: 0 0 5px red;
+   text-shadow: 0 0 5px red;
+ }
+ .edit{
+  float: right;
+ }
+ .deletebtn{
+   margin-right: -30px;
+ }
+span{
+  font-size: 18px !important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(56, 73, 59);
+}
+h3{
+  margin: 8px 22px;
+}
+span>a{
+  float:right;
+  color: blue !important;
+}
+h5{
+  font-size: 18px !important;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(99, 25, 29);
+  margin: 20px;
+}

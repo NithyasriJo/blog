@@ -1,0 +1,42 @@
+<div class="container">
+    <div *ngFor="let i of profile_data;let j = index" class="container2">
+        <div class="content" *ngIf="j<=4">
+            <img [routerLink]="['blog',j]" src="{{i.urlToImage}}" onerror="this.src='assets/idplogo.jpg'" height="260"
+                class="img_align">
+            <div class="content2" *ngIf="j<=4">
+                <h2 class="heading" [routerLink]="['blog',j]">{{i.title}} </h2>
+                <span *ngIf="i.description.length <= textLength">
+                    <h3> {{i.description}}</h3>
+                </span>
+                <span *ngIf="i.description.length > textLength && !showMore">
+                    <h3>{{i.description.substring(0,textLength)}}....</h3>
+                    <span (click)="showMore=true"><a>Read More</a></span>
+                </span>
+                <span *ngIf="i.description.length > textLength && showMore">
+                    <h3>{{i.description}}</h3>
+                    <span (click)="showMore=false"><a>Read Less</a></span>
+                </span>
+                <h5>{{i.publishedAt | date :'short'}}</h5>
+            </div>
+            <div class="btn">
+                <i class="fa fa-close deletebtn" (click)="dataDelete(j)"
+                    style="font-size:35px;color:rgb(197, 33, 33)"></i>
+            </div>
+            <div class="edit">
+                <a routerLink="/addblog"><i class="fa fa-edit " (click)="editData(j)" style="font-size: 35px;"></i></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div *ngFor="let i of profile_data;let j = index" class="container2" [style.display]="display">
+    <div class="content" *ngIf="j>4">
+        <img src="{{i.urlToImage}}" width="250" height="250" class="img_align">
+        <div class="content2">
+            <h2 class="heading">{{i.title | slice : 0 :70}} </h2>
+            <b class="description">{{i.description | slice : 0: 250}}</b>
+        </div>
+    </div>
+</div>
+<div class="btn">
+    <button (click)="view()">View more</button>
+</div>

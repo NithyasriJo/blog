@@ -1,0 +1,32 @@
+
+ .container2{
+    margin-top: 25px;
+    margin-left: 200px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+   width: 70%;
+   background-color: #E8E8E8
+ }
+ .content{
+   display: flex;
+ }
+ a:hover::before {
+   transform: scale(1.1);
+   box-shadow: 0 0 15px blue;
+ }
+  a:hover {
+   color: blue;
+   text-shadow: 0 0 5px blue;
+ }
+ .deletebtn:hover::before {
+   transform: scale(1.1);
+   box-shadow: 0 0 15px red;
+ }
+  .deletebtn:hover {
+   color:red;
+   box-shadow: 0 0 5px red;
+   text-shadow: 0 0 5px red;
+ }
+ .deletebtn{
+   margin-right: -30px;
+ }
